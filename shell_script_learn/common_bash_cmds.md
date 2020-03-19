@@ -6,3 +6,9 @@ ps -ef | grep docker
 ```
 - `-e`: Select all processes, including those of other users.
 - `-f`: Full-format listing
+
+## Linux : How to gzip a folder
+```bash
+tar -cvzf outputfilename foldertocompress
+# e.g. tar -cvzf meow.tar.gz meow/
+```
