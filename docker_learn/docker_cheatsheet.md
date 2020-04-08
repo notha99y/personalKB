@@ -72,3 +72,13 @@ docker system prune --volumes
 ```
 docker run -it -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix  <image name>
 ```
+
+## Common bugs
+- Error
+```bash
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`
+```
+- Solution
+```bash
+sudo service docker start
+```
