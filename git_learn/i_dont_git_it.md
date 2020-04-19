@@ -1,4 +1,12 @@
 # I dont git it
+## Using git commands
+- ```git log```: show thes history of commits
+- ```git reflog```: shows the logs of the different references git is keeping track of
+- ```git reset```: reset back the mistake after you commit
+```bash
+git reset --hard <commit hash> 
+git reset --hard origin/master # go back to version in origin master
+```
 
 ## Cloning a project with submodule
 1. Clone the main repo. By default, you will get the directories that contain submodules, but none of the files within them yet.
