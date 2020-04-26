@@ -7,6 +7,20 @@
 git reset --hard <commit hash> 
 git reset --hard origin/master # go back to version in origin master
 ```
+- ```git stash```: Stash the changes in a dirty working directory away
+```bash
+git stash list: list modifications stashed away
+git stash show: inspect
+git stash pop: remove a single stashed state from the stash list and apply it on top of the current working tree state
+```
+Commonly used:
+- To ```git pull```
+```bash
+git stash
+git pull
+git pop
+# locally you merge the incoming commits
+```
 
 ## Cloning a project with submodule
 1. Clone the main repo. By default, you will get the directories that contain submodules, but none of the files within them yet.
