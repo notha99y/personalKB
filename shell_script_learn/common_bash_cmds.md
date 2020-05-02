@@ -12,3 +12,14 @@ ps -ef | grep docker
 tar -cvzf outputfilename foldertocompress
 # e.g. tar -cvzf meow.tar.gz meow/
 ```
+
+## Rename files
+```bash
+for file in *.png; do mv "$file" "${file/_h.png/_half.png}"; done #  ${string/substring/substitution}
+```
+
+## Getting the top levels
+```bash
+grep -E '^ {2}"' example.json # grabs all first 2 leading spacing things
+grep -E '^ {2,6}"' example.json # grabs all the things between 2 and 6 spacings
+```
