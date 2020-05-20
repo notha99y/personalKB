@@ -1,5 +1,4 @@
-# I dont git it
-## Using git commands
+# Common git commands
 - ```git log```: show thes history of commits
 - ```git reflog```: shows the logs of the different references git is keeping track of
 - ```git reset```: reset back the mistake after you commit
@@ -21,6 +20,24 @@ git pull
 git pop
 # locally you merge the incoming commits
 ```
+
+# git submodules
+## Add gitsubmodule
+```bash
+git submodule add [--name <name>] <repository> [<path>]
+```
+where
+- `<name>` is the submodule's name that will appear in the `.gitmodules` file. if left unspecified, `<name>` simply defaults to `<path>`
+- `<repository>` is the URL of the new submodule's repo
+- `<path>` is the name of the subdirectory of the main repo
+## Delete gitsubmodule
+- Delete the relevant section from the `.gitmodules` file
+- Stage the `.gitmodules` changes `git add .gitmodules`
+- Delete the relevant section from `.git/config`
+- Run `git rm --cached path_to_submodule (no trailing slash)`
+- Run `rm -rf .git/modules/path_to_submodule (no trailing slash)`
+- Commit `git commit -m "Removed submodule "`
+- Delete the now untracked submodule files `rm -rf path_to_submodule`
 
 ## Cloning a project with submodule
 1. Clone the main repo. By default, you will get the directories that contain submodules, but none of the files within them yet.
