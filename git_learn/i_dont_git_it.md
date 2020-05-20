@@ -36,7 +36,7 @@ Essentially, it a matter of balancing both your git and ssh configuratins.
 Let's assume you have two github accounts `githubWork` `githubPersonal`. 
 1. Create two SSH keys, saving each to a seperate file:
 ```bash
-cd ~/.shh
+cd ~/.ssh
 ssh-keygen -t rsa -C "githubPersonal@example.com"
 # when prompted, name the file that saves the key
 ssh-keygen -t rsa -C "githubWork@example.com"
