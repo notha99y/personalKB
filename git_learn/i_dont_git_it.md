@@ -1,5 +1,9 @@
 # Common git commands
 - ```git log```: show thes history of commits
+```bash
+git log --pretty=oneline --abbrev-commit -n 5 # prettify and show latest 5 logs
+```
+
 - ```git reflog```: shows the logs of the different references git is keeping track of
 - ```git reset```: reset back the mistake after you commit
 ```bash
@@ -20,6 +24,16 @@ git pull
 git pop
 # locally you merge the incoming commits
 ```
+## Delete a local Commit
+[more info](https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/)
+```bash
+git reset -hard HEAD~ #Delete the most recent commit
+```
+Using git rebase
+```bash
+git rebase -i HEAD~2 # 
+```
+HEAD is the commit currently checked out (wherever you are right now). HEAD~ is the same as HEAD~1, which means one commit before the current commit. HEAD~2, or HEAD~n, means n number of commits before the current commit.
 
 # git submodules
 ## Add gitsubmodule
