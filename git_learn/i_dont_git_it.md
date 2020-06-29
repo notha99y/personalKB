@@ -59,11 +59,11 @@ where
 
 Subsequently, you can just `git pull --recurse-submodules`
 
-## Managing Multiple GitHub Accounts
+# Managing Multiple GitHub Accounts
 [more info](https://mherman.org/blog/managing-multiple-github-accounts/) <br>
 Essentially, it a matter of balancing both your git and ssh configuratins. 
 
-### SSH Keys
+## SSH Keys
 Let's assume you have two github accounts `githubWork` `githubPersonal`. 
 1. Create two SSH keys, saving each to a seperate file:
 ```bash
@@ -116,4 +116,17 @@ ssh-add -l
 test to make sure Github recognizes the keys
 ```bash
 ssh -T personal
+```
+
+## Having different git configs
+You can configure an individual repo to use a specific user / email address which overrides the global configuration. From the root of the repo, run
+```bash
+git config user.name "Your Name Here"
+git config user.email your@email.com
+```
+
+whereas the default user / email is configured in your ~/.gitconfig
+```bash
+git config --global user.name "Your Name Here"
+git config --global user.email your@email.com
 ```
