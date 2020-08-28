@@ -23,3 +23,18 @@ for file in *.png; do mv "$file" "${file/_h.png/_half.png}"; done #  ${string/su
 grep -E '^ {2}"' example.json # grabs all first 2 leading spacing things
 grep -E '^ {2,6}"' example.json # grabs all the things between 2 and 6 spacings
 ```
+
+## Check for the PID that is using a specific port
+```bash
+sudo lsof -i :PORTNUMBER
+```
+
+## Check ubuntu version
+```bash
+lsb_release -a
+```
+
+## Count the number of files in a directory
+```bash
+ls <directory> | wc -l
+```

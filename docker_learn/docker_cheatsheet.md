@@ -74,11 +74,27 @@ docker run -it -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/
 ```
 
 ## Common bugs
-- Error
-```bash
-Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`
-```
+### Error 1: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
 - Solution
 ```bash
 sudo service docker start
+```
+
+### Error 2:Couldn’t connect to Docker daemon at http+docker://localhost – is it running?
+reference: https://techoverflow.net/2019/03/16/how-to-fix-error-couldnt-connect-to-docker-daemon-at-httpdocker-localhost-is-it-running/
+- Solution
+
+Two possible reasons for this error message
+
+1. The user you are running the command as does not have the permissions to access docker. 
+
+You can fix this by either running as super user `sudo` or adding your user to the `docker` group with the following command
+```bash
+sudo usernod -a -G docker $USER
+```
+You would have to log out and login back for this to take effect
+
+2. You have not started docker
+```bash
+sudo systemctl start docker
 ```

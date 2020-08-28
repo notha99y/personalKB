@@ -11,3 +11,4 @@ This prevents the port collisions with already open ports. If you do want the se
 ## Fixing runtime nvidia
 As of 9 May 2020, the new docker-compose does not support the nvidia runtime. The --gpu all flag does not work.
 A work around can be found [here](https://github.com/NVIDIA/nvidia-container-runtime#docker-engine-setup)
+
