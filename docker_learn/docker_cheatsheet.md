@@ -55,7 +55,10 @@ docker container stop $(docker container ls -aq) # stop all containers
 docker container rm <container id>
 docker container rm $(docker container ls -aq) # removes all stopped containers
 ```
-
+- checking docker logs
+```bash
+docker logs -f <container name>
+```
 
 ## Remove all usused objects
 - Removes all stopped containers, all dangling images and all unused networks:
