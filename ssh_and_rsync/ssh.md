@@ -8,6 +8,12 @@ Verbose: you can add as many 'v's as you want behind the ssh flag for verbosity
 ssh -vvvv <ip address of remote server>
 ```
 
+### SSH tunneling: Forward a specific port
+```bash
+ssh -N -f -L localhost:<port>:localhost:<port> <username@remote server ip>
+```
+[tutorial](https://www.youtube.com/watch?v=N8f5zv9UUMI)
+
 ### Rsync stuffs
 Rsync up
 ```bash
@@ -17,7 +23,7 @@ file=$1
 port=$2
 echo $file
 
-rsync --progress $file <remote ip address>.$port:<remote file directory location>/$file
+rsync --progress $file <username@remote ip address>.$port:<remote file directory location>/$file
 ```
 
 
@@ -29,5 +35,5 @@ file=$1
 port=$2
 echo $file
 
-rsync --progress <remote ip address>.$port:<remote file directory location>/$file .
+rsync --progress <username@remote ip address>.$port:<remote file directory location>/$file .
 ```
