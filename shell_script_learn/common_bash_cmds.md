@@ -38,3 +38,9 @@ lsb_release -a
 ```bash
 ls <directory> | wc -l
 ```
+
+## Getting your ip
+```bash
+curl ip.sb
+```
+Check out their website at https://ip.sb/
