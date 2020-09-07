@@ -102,3 +102,38 @@ pip install cookiecutter
 
 cookiecutter gh:ionelmc/cookiecutter-pylibrary
 ```
+
+# Installing packages not through PyPI
+## Installing packages via Git
+It’s quite common to want to pip install a version of a package that hasn’t been released to PyPI, but is available on its Git repository host, such as GitHub. If the package is pure Python or has a relatively simple build process integrated with setup.py, it can be installed from source.
+
+Here are the supported forms:
+```bash
+[-e] git+http://git.example.com/MyProject#egg=MyProject
+[-e] git+https://git.example.com/MyProject#egg=MyProject
+[-e] git+ssh://git.example.com/MyProject#egg=MyProject
+[-e] git+file:///home/user/projects/MyProject#egg=MyProject
+```
+
+Passing a branch name, a commit hash, a tag name or a git ref is possible like so:
+```bash
+[-e] git+https://git.example.com/MyProject.git@master#egg=MyProject
+[-e] git+https://git.example.com/MyProject.git@v1.0#egg=MyProject
+[-e] git+https://git.example.com/MyProject.git@da39a3ee5e6b4b0d3255bfef95601890afd80709#egg=MyProject
+[-e] git+https://git.example.com/MyProject.git@refs/pull/123/head#egg=MyProject
+```
+
+
+## Installing via tarballs
+
+
+### Why use python -m pip install instead of pip install
+In brief, the main problem:
+
+Most Python developers install more than one Python version. This is either due to their OS including an old Python by default, working on projects that use different versions, or simple experimentation.
+
+Running the `pip` executable with more than one Python version can be unpredictable. When you upgrade pip on one version, it can replace the executable from the other. So running pip install at one moment might use Python 2.7, then later it could use Python 3.7.
+
+It’s not hard to see how this can lead to problems understanding what’s installed where and when.
+
+When you use `python -m pip`, the `pip` package is executed explicitly with the version of Python that python points to. If you have other interpreters, you can use them precisely and predictably, e.g. `python3.6 -m pip`.
