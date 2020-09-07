@@ -1,0 +1,22 @@
+language: python
+sudo: false
+
+python:
+     - "3.6"
+     - "3.7-dev"
+
+before_install:
+    - python --version
+    - uname -a
+    - lsb_release -a
+
+install:
+    - pip install tox
+
+script:
+    - tox -v -e py
+
+notificaitons:
+    email:
+        on_success: never
+        on_failure: always
