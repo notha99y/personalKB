@@ -9,7 +9,7 @@ pip install helloworld-notha99y
 ```
 ## Usage
 ```python
-from helloworld-notha99y import say_hello
+from helloworld import say_hello
 
 # Generate "Hello, World!"
 say_hello()
