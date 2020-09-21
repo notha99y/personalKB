@@ -59,6 +59,14 @@ docker container rm $(docker container ls -aq) # removes all stopped containers
 ```bash
 docker logs -f <container name>
 ```
+- List the volumes
+```bash
+docker volume ls
+```
+- Check that the volumes was created
+```bash
+docker volume inspect <volume name>
+```
 
 ## Remove all usused objects
 - Removes all stopped containers, all dangling images and all unused networks:
