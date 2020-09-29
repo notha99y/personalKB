@@ -1,6 +1,28 @@
 # Docker-Compose
-## Docker-compose up
+## Specifying a host path for a container volume
+With the `local` volume driver comes the ability to use arbitrary mounts. By using [bind mount](https://docs.docker.com/storage/bind-mounts/) you can achieve this. [Solution source](https://stackoverflow.com/questions/36387032/how-to-set-a-path-on-host-for-a-named-volume-in-docker-compose-yml)
+```yaml
+verison: '2' 
+# works for 3 also
+services:
+  db:
+    image: mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+volumes:
+  dbdata:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/srv/db-data'
+```
 
+## Docker-compose up
+Run in detached mode
+```bash
+docker-compose up -d 
+```
 ## Docker-compose run
 The command passed by run overrides the command defined in the service configuration.
 For example, if the web service configuration is started with bash, then docker-compose run web python app.py overrides it with python app.py.
