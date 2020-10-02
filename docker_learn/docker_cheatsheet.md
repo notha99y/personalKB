@@ -1,5 +1,17 @@
 # Docker Cheatsheet
+## Storage location of Docker Containers and Images
+[source](https://www.freecodecamp.org/news/where-are-docker-images-stored-docker-container-paths-explained/)
 
+A Docker container consists of `network settings`, `volumes`, and `images`. The location of Docker files depends on your operating system. Here is an overview for the most used operating systems:
+- Ubuntu: /var/lib/docker/
+- Fedora: /var/lib/docker/
+- Debian: /var/lib/docker/
+- Windows: C:\ProgramData\DockerDesktop
+- MacOS: ~/Library/Containers/com.docker.docker/Data/vms/0/
+
+Inside `/var/lib/docker`, different information is stored. For example, data for containers, volumes, builds, networks, and clusters.
+
+The heaviest contents are usually images and the default storage driver overlay2 will store them in `/var/lib/docker/overlay2`
 ## Docker Image
 - See list of docker images
 ```bash
