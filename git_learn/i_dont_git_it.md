@@ -35,6 +35,24 @@ git rebase -i HEAD~2 #
 ```
 HEAD is the commit currently checked out (wherever you are right now). HEAD~ is the same as HEAD~1, which means one commit before the current commit. HEAD~2, or HEAD~n, means n number of commits before the current commit.
 
+## Branches
+### Deleting Branches
+```bash
+git branch -d <branch name>
+```
+if you have unmerged changes, git would not allow this. if you still want to delete the branch anywaym use
+```bash
+git branch -D <branch name>
+```
+To delete a remote branch, use `git push` 
+```bash
+git push origin --delete <remote-branch-name>
+```
+## Creating a branch with no history (Orphan)
+```bash
+git checkout --orphan <new-orphan-branch-name>
+```
+
 # git submodules
 ## Add gitsubmodule
 ```bash
