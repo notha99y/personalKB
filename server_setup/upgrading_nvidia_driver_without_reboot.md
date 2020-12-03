@@ -9,6 +9,22 @@ However do note that this would stop processes that are running on the GPU.
 The following methods have only been tested on servers running Ubuntu 16.04 LTS.
 
 ## Install your nvidia driver 
+Some error you may face and possible solution:
+- gcc not installed:
+install gcc!
+```bash
+sudo apt-get install gcc
+```
+- server X error
+    - [what is server X]()
+    - [how to stop and restart an x server x](https://ericplayground.com/2017/09/26/how-to-stop-and-restart-an-x-server-on-ubuntu/)
+
+- there is some nvidia processes running:
+Stop by using the `lsmod | grep nvidia`, `rmmod <module-name>` and `kill <pid>` combo below
+
+- current installation of nvidia driver may cause some conflict
+choose to remove current installation given by nvidia
+
 After this is done you would yield the following error:
 ```bash
 nvidia-smi
