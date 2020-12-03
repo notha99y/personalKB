@@ -26,3 +26,7 @@ This quick fix is summarized in two steps:
         1. Check processes: `sudo lsof /dev/nvidia*`
         1. Kill processes: `kill <pid>`
 1. Load your nvidia kernel modules using `nvidia-smi`
+
+## References
+- https://flummox-engineering.blogspot.com/2019/12/nvidia-how-to-fix-failed-to-initialize-nvml-driver-library-version-mismatch.html
+- https://askubuntu.com/questions/851069/latest-nvidia-driver-on-ubuntu-16-04
