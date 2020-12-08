@@ -21,3 +21,10 @@ conda env export > environment.yml # exporting active environment to a new file
 ```bash
 conda env export --no-builds > environment.yml # export active environment to a new file w/o builds
 ```
+
+## Jupyter notebook
+Sometimes jupyter notebook will use the conda base environment. To get it to use your own conda environment, run the following
+```bash
+which python # check you are using the right python if not conda activate your environment
+python -m ipykernel install --user --name=<env-name>
+```
