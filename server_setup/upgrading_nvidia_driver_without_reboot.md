@@ -9,20 +9,44 @@ However do note that this would stop processes that are running on the GPU.
 The following methods have only been tested on servers running Ubuntu 16.04 LTS.
 
 ## Install your nvidia driver 
-Some error you may face and possible solution:
-- gcc not installed:
+- install from [here](https://www.nvidia.com/Download/index.aspx?lang=en-us)
+
+### Cuda Nvidia Driver compatiability tabe
+![table](cuda_nvidia_driver_compatibility_table.png)
+
+### Checking graphic card
+```bash
+sudo lshw -C display
+```
+or
+```bash
+lspci | grep -i nvidia
+```
+
+### Some error you may face and possible solution:
+#### ERROR: The Nouveau kernel driver is currently in use by your system:
+
+There is two ways to solve this:
+- [blacklist it](https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver)
+- remove the module (recommended as dont need to restart)
+```bash
+stop X-server: sudo service lightdm stop
+unload the nouveau driver: sudo rmmod nouveau
+```
+
+#### gcc not installed:
 install gcc!
 ```bash
 sudo apt-get install gcc
 ```
-- server X error
+#### server X error
     - [what is server X]()
     - [how to stop and restart an x server x](https://ericplayground.com/2017/09/26/how-to-stop-and-restart-an-x-server-on-ubuntu/)
 
-- there is some nvidia processes running:
+#### there is some nvidia processes running:
 Stop by using the `lsmod | grep nvidia`, `rmmod <module-name>` and `kill <pid>` combo below
 
-- current installation of nvidia driver may cause some conflict
+#### current installation of nvidia driver may cause some conflict
 choose to remove current installation given by nvidia
 
 After this is done you would yield the following error:
