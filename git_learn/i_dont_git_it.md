@@ -24,6 +24,14 @@ git pull
 git pop
 # locally you merge the incoming commits
 ```
+
+## Remote
+```bash
+git remote -v # shows remote repositorries
+```
+```bash
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+```
 ## Delete a local Commit
 [more info](https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/)
 ```bash
