@@ -1,0 +1,12 @@
+name: learn_pytorch
+channels:
+    - default
+    - pytorch
+dependencies:
+    - python=3.7
+    - pip
+    - pytorch
+    - torchvision
+    - cudatoolkit=10.1
+    - pip:
+        - jupyter

@@ -1,0 +1,9 @@
+name: learn_tf
+channels:
+    - default
+    - conda-forge
+
+dependencies:
+    - python=3.8
+    - pip
+    - tensorflow-gpu
