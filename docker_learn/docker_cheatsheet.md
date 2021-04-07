@@ -79,6 +79,10 @@ docker volume ls
 ```bash
 docker volume inspect <volume name>
 ```
+- Inspect docker container ip address
+```bash
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container id>
+```
 
 ## Remove all usused objects
 - Removes all stopped containers, all dangling images and all unused networks:
