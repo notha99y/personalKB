@@ -53,6 +53,19 @@ or via -e options placed after the URL:
 wget ... -e use_proxy=yes -e http_proxy=127.0.0.1:8080 ..
 ```
 
+## Curl
+```bash
+curl -L -O <url> --proxy <http_proxy>
+```
+
+From man curl:
+```bash
+-x, --proxy <[protocol://][user:password@]proxyhost[:port]>
+
+     Use the specified HTTP proxy. 
+     If the port number is not specified, it is assumed at port 1080.
+```
+
 ## Pip
 ```bash
 pip install --proxy=http://user:pw@address:port somepackage
