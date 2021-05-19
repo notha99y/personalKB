@@ -4,6 +4,11 @@ On Unix-like OS, the crontab command opens the cron table for editing. The cron 
 
 The daemon which reads the crontab and executres the commands at the right time is called cron. It's named after Kronos, the Greek god of time.
 
+You can check all the crontabs written here 
+```bash
+/var/spool/cron/crontabs
+```
+
 ## Syntax
 ```bash
 crontab [-u user] file
@@ -19,8 +24,6 @@ crontab [-u user] [-l | -r | -e] [-i] [-s]
 - -e: Edit the current crontab, using the editor specified
 - -i: Same as `-r`, but gives the user a yes/no confirmation prompt before removeing the crontab
 - -s: SELinux only: appends the current SELinux security conext string as an MLS_LEVEL
-
-
 
 ## Crontab entries examples
 - Run the shell script /home/renjie/backup.sh on Jan 2 at 6:15 am
