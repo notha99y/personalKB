@@ -20,9 +20,12 @@ sudo apt-cache search nvidia-driver
 # install latest driver available
 ```
 
-### Cuda Nvidia Driver compatiability tabe
+### Cuda Nvidia Driver compatiability table
 ![table](cuda_nvidia_driver_compatibility_table.png)
 
+### Cuda Tensorflow compatiability table
+[Updated link](https://www.tensorflow.org/install/source#gpu)
+![table](cuda_tensorflow_compatibility_table.png)
 ### Checking graphic card
 ```bash
 sudo lshw -C display
