@@ -49,6 +49,17 @@ grep -E '^ {2,6}"' example.json # grabs all the things between 2 and 6 spacings
 sudo lsof -i :PORTNUMBER
 ```
 
+## Check for the PID using a range of ports
+```bash
+sudo lsof -i:PORT_START-PORT_END
+# e.g. sudo lsof -i:8001-8030
+```
+
+## Kill PIDs using a specific port
+```bash
+sudo kill -9 `sudo lsof -t -i:8001` # note to use the backticks
+sudo kill -9 $(sudo lsof -t -i:8001) # you can also use the command interpolation
+```
 ## Check ubuntu version
 ```bash
 lsb_release -a
