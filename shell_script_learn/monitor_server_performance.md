@@ -6,7 +6,8 @@ watch nvidia-smi
 
 ## CPU
 ```bash
-htop 
+htop
+htop -p PID,PID,PID # to filter by PIDs
 ```
 
 ## Docekr
