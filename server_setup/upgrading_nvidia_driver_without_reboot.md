@@ -12,6 +12,11 @@ The following methods have only been tested on servers running Ubuntu 16.04 LTS.
 ### From nvidia
 - install from [here](https://www.nvidia.com/Download/index.aspx?lang=en-us)
 
+To install cuda 10.1 for Tesla V100
+```bash
+wget "https://us.download.nvidia.com/tesla/418.211.00/NVIDIA-Linux-x86_64-418.211.00.run" -e use_proxy=yes -e https_proxy=${YOUR_PROXY}
+```
+
 ### Using apt
 ```bash
 sudo add-apt-repository ppa:graphics-drivers/ppa
