@@ -21,7 +21,9 @@ conda env export > environment.yml # exporting active environment to a new file
 ```bash
 conda env export --no-builds > environment.yml # export active environment to a new file w/o builds
 ```
-
+```bash
+conda clean -tipsy # remove cache
+```
 ## Jupyter notebook
 Sometimes jupyter notebook will use the conda base environment. To get it to use your own conda environment, run the following
 ```bash
