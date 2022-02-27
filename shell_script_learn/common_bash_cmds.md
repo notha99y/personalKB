@@ -60,6 +60,12 @@ sudo lsof -i:PORT_START-PORT_END
 sudo kill -9 `sudo lsof -t -i:8001` # note to use the backticks
 sudo kill -9 $(sudo lsof -t -i:8001) # you can also use the command interpolation
 ```
+## Check where a PID is ran from
+```bash
+ll /proc/>PID>/cwd
+e.g. ll /proc/31231/cwd
+```
+
 ## Check ubuntu version
 ```bash
 lsb_release -a
