@@ -1,3 +1,6 @@
+## Useful links
+- [linux sysops handbook](https://abarrak.gitbook.io/linux-sysops-handbook/)
+
 ## Check Storage in server
 List the storage of directories
 ```bash
