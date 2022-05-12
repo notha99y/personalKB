@@ -8,7 +8,13 @@ However do note that this would stop processes that are running on the GPU.
 
 The following methods have only been tested on servers running Ubuntu 16.04 LTS.
 
+
 ## Install your nvidia driver 
+### Removing all nvidia stuffs
+```bash
+sudo apt-get remove --purge '^nvidia-.*'
+```
+
 ### From nvidia
 - install from [here](https://www.nvidia.com/Download/index.aspx?lang=en-us)
 
