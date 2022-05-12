@@ -82,6 +82,11 @@ This quick fix is summarized in two steps:
     1. Sometimes you may encounter the following error: `rmmod: ERROR: <module-name>` in use. You can fix this by first checking which processes are using the GPU and terminate them
         1. Check processes: `sudo lsof /dev/nvidia*`
         1. Kill processes: `kill <pid>`
+
+### To stop all processes using nvidia run 
+```bash
+lsof /dev/nvidia* | awk '{print $2}' | xargs -I {} kill {}
+```
 1. Load your nvidia kernel modules using `nvidia-smi`
 
 ## References
