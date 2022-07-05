@@ -8,7 +8,13 @@ However do note that this would stop processes that are running on the GPU.
 
 The following methods have only been tested on servers running Ubuntu 16.04 LTS.
 
+
 ## Install your nvidia driver 
+### Removing all nvidia stuffs
+```bash
+sudo apt-get remove --purge '^nvidia-.*'
+```
+
 ### From nvidia
 - install from [here](https://www.nvidia.com/Download/index.aspx?lang=en-us)
 
@@ -82,6 +88,11 @@ This quick fix is summarized in two steps:
     1. Sometimes you may encounter the following error: `rmmod: ERROR: <module-name>` in use. You can fix this by first checking which processes are using the GPU and terminate them
         1. Check processes: `sudo lsof /dev/nvidia*`
         1. Kill processes: `kill <pid>`
+
+### To stop all processes using nvidia run 
+```bash
+lsof /dev/nvidia* | awk '{print $2}' | xargs -I {} kill {}
+```
 1. Load your nvidia kernel modules using `nvidia-smi`
 
 ## References

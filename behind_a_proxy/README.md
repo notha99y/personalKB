@@ -1,5 +1,19 @@
 ## Docker
+### Server setup
+Before you attempt any other config, you may need to do the following server setup.
+1. Create a new file called `http-proxy.conf` in `/etc/systemd/system/docker.service.d/`
+2. In the file add the following
 
+```bash
+[Service]
+Environment="HTTP_PROXY=YOUR-PROXY"
+Environment="HTTPS_PROXY=YOUR-PROXY"
+```
+3. restart daemon `sudo systemctl daemon-reload`
+4. restart docker `sudo service docker restart`
+
+### Docker config
+With the docker at the server set up you then can use the following methods to include the proxy into your docker build
 - Default docker network using proxy [link](https://docs.docker.com/network/proxy/)
 - Do it in docker file. Set and unset[link](https://stackoverflow.com/questions/55789409/how-to-unset-env-in-dockerfile)
 
