@@ -4,7 +4,7 @@ USEFUL LINK: https://stackoverflow.com/questions/58068818/how-to-use-jupyter-not
 
 ```bash
 # use conda to install instead of pip 
-conda install jupyer
+conda install jupyter
 ```
 
 ## Useful Commands
