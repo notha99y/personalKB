@@ -4,6 +4,11 @@
 watch nvidia-smi
 ```
 
+Check for ghost threads which are not shown up on nvidia-smi
+```bash
+sudo fuser -v /dev/nvidia*
+```
+
 ## CPU
 ```bash
 htop
