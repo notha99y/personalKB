@@ -3,5 +3,5 @@
 
 PYBIND11_MODULE(pybind11_example, m) {
     m.doc() = "pybind11 example plugin"; // Optional module docstring
-    m.def("cpp_function", &cppmult, "A function that multiplies two numbers");
+    m.def("cpp_function", &cppmult, "A function which multiplies two numbers");
 }

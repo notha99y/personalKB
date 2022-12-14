@@ -139,7 +139,7 @@ def build_cppmult(c):
 def compile_python_module(cpp_name, extension_name):
     invoke.run(
         "g++ -O3 -Wall -Werror -shared -std=c++11 -fPIC "
-        "`python3 -m pybind11 --includes` "
+        "`python -m pybind11 --includes` "
         "-I . "
         "{0} "
         "-o {1}`python3-config --extension-suffix` "
