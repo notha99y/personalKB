@@ -14,6 +14,19 @@ ssh -N -f -L localhost:<port>:localhost:<port> <username@remote server ip>
 ```
 [tutorial](https://www.youtube.com/watch?v=N8f5zv9UUMI)
 
+## Debugging SSH
+### cant ssh-add due to "Could not open a connection to your authentication agent"
+Solution: start ssh agent with 
+```bash
+eval `ssh-agent -s`
+ssh-add <ssh-file>
+```
+
+### scp stuffs
+```bash
+scp <file> <username@remote-ip-address>:<remote-directory>
+```
+
 ### Rsync stuffs
 Rsync up
 ```bash
