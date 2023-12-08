@@ -39,9 +39,15 @@ git reset -hard HEAD~ #Delete the most recent commit
 ```
 Using git rebase
 ```bash
-git rebase -i HEAD~2 # 
+git rebase -i HEAD~2 # this will open the interactive mode
+git rebase -i <commit> # or you can do it at a particular commit hash
 ```
 HEAD is the commit currently checked out (wherever you are right now). HEAD~ is the same as HEAD~1, which means one commit before the current commit. HEAD~2, or HEAD~n, means n number of commits before the current commit.
+
+### Push the change to remote
+```bash
+git push origin <branch> --force # this will push the local changes to origin. be aware that rewriting the history like this can cause issue for anyone else who has pulled the changes. 
+```
 
 ## Branches
 ### Deleting Branches
