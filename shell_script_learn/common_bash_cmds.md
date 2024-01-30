@@ -20,6 +20,8 @@ sudo du -h -s .[^.]* | sort -h
 ```bash
 find <dir> -iname <file name>
 # e.g. find ~ -iname <*.txt> show all the full paths of file with extension .txt
+# find directionary instead of a filename
+find / -type d -name <directory name>
 ```
 ## ps
 Process status, information about processes running in memory.
