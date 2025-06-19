@@ -16,7 +16,7 @@ uv remove --script: Remove a dependency from a script
 ```bash
 uv remove django
 ```
-## other usefully utilities
+## other useful utilities
 ```bash
 uv sync: Sync the project's dependencies with the environment.
 uv lock: Create a lockfile for the project's dependencies.
